@@ -1,0 +1,20 @@
+@model IEnumerable<findPet.Models.Noticia>
+
+<h1>Quadro de Notícias</h1>
+
+<div>
+    @foreach (var Noticia in Model)
+    {
+        <h2>@Noticia.Cabecalho</h2><br />
+        <p>@Noticia.Texto</p>
+        <img class="imagem" src="@Noticia.ImagemUrl" alt="erro">
+    }
+</div>
+<div>
+    <form method="post" asp-action="adicionar">
+        <input type="text" name="cabecalho" placeholder="informe cabeçalho da noticia" /><br>
+        <input type="text" name="ImagemUrl" placeholder="informe a url da imagem" /><br />
+        <textarea name="Texto" placeholder="informe o Texto da noticia"></textarea><br />
+        <input type="submit" value="Adiciona Notícias" />
+    </form>
+</div>
