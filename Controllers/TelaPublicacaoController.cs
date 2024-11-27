@@ -19,9 +19,8 @@ namespace findPet.Controllers
                 // Simula salvar o pet no banco de dados
                 TempData["SuccessMessage"] = "Pet cadastrado com sucesso!";
                 return RedirectToAction("Create");
-                "teste2" 
             }
-            //teste luiz bora bill e fi do bill
+            
             return View(telaPublicacaoModel);
         }
     }
