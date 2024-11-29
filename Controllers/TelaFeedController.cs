@@ -3,7 +3,7 @@ using findPet.Models;
 
 namespace findPet.Controllers
 {
-    public class TelaPublicacaoController : Controller
+    public class TelaFeedController : Controller
     {
         [HttpGet]
         public IActionResult Index()
@@ -12,17 +12,17 @@ namespace findPet.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(telaPublicacaoModel telaPublicacaoModel)
+        public IActionResult Create(telaFeedModel telaFeedModel)
         {
             if (ModelState.IsValid)
             {
                 // Simula salvar o pet no banco de dados
                 TempData["SuccessMessage"] = "Pet cadastrado com sucesso!";
                 return RedirectToAction("Create");
-                "teste2" 
+
             }
-            
-            return View(telaPublicacaoModel);
+            //teste luiz bora bill e fi do bill
+            return View(telaFeedModel);
         }
     }
 }
