@@ -3,11 +3,11 @@ namespace findPet.Models
     public class telaCadastroModel
     {
         public required string Nome { get; set; }
-        public required string Raca { get; set; }
-        public required string Cor { get; set; }
-        public required string Porte { get; set; }
-        public required string LocalDesaparecimento { get; set; }
-        public required DateTime DataDesaparecimento { get; set; }
+        public required string Email { get; set; }
+        public required string Senha { get; set; }
+        public required string CPF { get; set; }
+        public required string Telefone { get; set; }
+        public required DateTime DataNascimento { get; set; }
     }
 }
 

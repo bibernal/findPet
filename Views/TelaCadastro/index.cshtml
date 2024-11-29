@@ -5,12 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Pet Desaparecido</title>
+    <title>Cadastro Usuario</title>
     <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
     <div class="container">
-        <h1>Cadastro de Pet Desaparecidoooo</h1>
+        <h1>Cadastre-se</h1>
         
         @if (TempData["SuccessMessage"] != null)
         {
@@ -19,47 +19,36 @@
 
         <form asp-action="Create" asp-controller="telaPublicacaoModel" method="post">
             <div class="form-group">
-                <label for="Nome">Nome do Pet</label>
+                <label for="Nome">Nome</label>
                 <input type="text" id="Nome" name="Nome" value="@Model?.Nome" required />
             </div>
             
             <div class="form-group">
-                <label for="Raca">Raça</label>
-                <input type="text" id="Raca" name="Raca" value="@Model?.Raca" required />
+                <label for="Raca">E-mail</label>
+                <input type="text" id="Email" name="Raca" value="@Model?.Raca" required />
             </div>
             
             <div class="form-group">
-                <label for="Cor">Cor</label>
-                <input type="text" id="Cor" name="Cor" value="@Model?.Cor" required />
+                <label for="Cor">Senha</label>
+                <input type="text" id="Cor" name="Senha" value="@Model?.Cor" required />
             </div>
             
             <div class="form-group">
-                <label for="Porte">Porte</label>
-                <select id="Porte" name="Porte" required>
-                    @* Renderiza a primeira opção *@
-                    <option value="" disabled =  "@(Model?.Porte == null ? "selected" : "")">Selecione o porte</option>
-
-                    @* Renderiza as opções com base no modelo *@
-                    <option value="Pequeno" disabled = "@(Model?.Porte == "Pequeno" ? "selected" : "")">Pequeno</option>
-                    <option value="Médio" disabled = "@(Model?.Porte == "Médio" ? "selected" : "")">Médio</option>
-                    <option value="Grande" disabled = "@(Model?.Porte == "Grande" ? "selected" : "")">Grande</option>
-                </select>
-            </div>
-
-
-
-            
-            <div class="form-group">
-                <label for="LocalDesaparecimento">Local do Desaparecimento</label>
-                <input type="text" id="LocalDesaparecimento" name="LocalDesaparecimento" value="@Model?.LocalDesaparecimento" required />
+                <label for="Cor">CPF</label>
+                <input type="text" id="Cor" name="CPF" value="@Model?.Cor" required />
             </div>
             
             <div class="form-group">
-                <label for="DataDesaparecimento">Data do Desaparecimento</label>
-                <input type="date" id="DataDesaparecimento" name="DataDesaparecimento" value="@Model?.DataDesaparecimento.ToString("yyyy-MM-dd")" required />
+                <label for="Cor">Telefone</label>
+                <input type="text" id="Cor" name="Telefone" value="@Model?.Cor" required />
+            </div>
+
+            <div class="form-group">
+                <label for="DataDesaparecimento">Data de Nascimento</label>
+                <input type="date" id="DataDesaparecimento" name="DataNascimento" value="@Model?.DataDesaparecimento.ToString("yyyy-MM-dd")" required />
             </div>
             
-            <button type="submit">Cadastrar</button>
+            <button type="submit">Proximo</button>
         </form>
     </div>
 </body>
