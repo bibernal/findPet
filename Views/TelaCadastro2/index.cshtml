@@ -1,4 +1,4 @@
-@model findPet.Models.telaCadastroModel
+@model findPet.Models.telaCadastro2Model
 @{
     Layout = "_CadastroLayout";  // Define o layout que você criou
 }
@@ -7,12 +7,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Usuario</title>
+    <title>Cadastro Usuario2</title>
     <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
     <div class="container">
-        <h1>Cadastre-se</h1>
+        <h1>Cadastre-se2</h1>
         
         @if (TempData["SuccessMessage"] != null)
         {
@@ -52,12 +52,10 @@
             
         </form>
         <form asp-action="Create" method="post">
+           <!-- Campos do formulário -->
            <button type="submit">Proximo</button>
         </form>
 
     </div>
-    <footer>
-        <p>&copy; 2024 Minha Aplicacao. Todos os direitos reservados.</p>
-    </footer>
 </body>
 </html>
