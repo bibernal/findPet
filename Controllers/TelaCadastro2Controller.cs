@@ -3,7 +3,7 @@ using findPet.Models;
 
 namespace findPet.Controllers
 {
-    public class TelaCadastroController : Controller
+    public class TelaCadastro2Controller : Controller
     {
         [HttpGet]
         public IActionResult Index()
@@ -12,12 +12,12 @@ namespace findPet.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(telaCadastroModel TelaCadastro2)
+        public IActionResult Create(telaCadastroModel telaCadastroModel)
         {
-            return RedirectToAction("Index", "TelaCadastro2");
+            return RedirectToAction("Index", "TelaCadastro");
             
         }
-        public IActionResult TelaCadastro2()
+        public IActionResult telaCadastro()
         {
             return View();
         }
