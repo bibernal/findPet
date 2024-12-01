@@ -8,6 +8,8 @@ namespace findPet.Models
         public required string Porte { get; set; }
         public required string LocalDesaparecimento { get; set; }
         public required DateTime DataDesaparecimento { get; set; }
+        public required string Mensagem { get; set; }
+
     }
 }
 
