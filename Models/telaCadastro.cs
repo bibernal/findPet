@@ -10,4 +10,3 @@ namespace findPet.Models
         public required DateTime DataNascimento { get; set; }
     }
 }
-
