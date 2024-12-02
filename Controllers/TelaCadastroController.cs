@@ -8,19 +8,11 @@ namespace findPet.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            // Define a codificação de resposta para UTF-8
+            Response.ContentType = "text/html; charset=utf-8";
             return View();
         }
 
-        [HttpPost]
-        public IActionResult Create(telaCadastroModel TelaCadastro2)
-        {
-            return RedirectToAction("Index", "TelaCadastro2");
-            
-        }
-        public IActionResult TelaCadastro2()
-        {
-            return View();
-        }
     }
 }
 

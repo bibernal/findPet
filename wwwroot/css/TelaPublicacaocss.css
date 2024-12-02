@@ -1,73 +1,59 @@
-/* Contêiner principal com layout lado a lado */
 .container {
+    min-height: 100vh; /* 100% da altura da viewport */
     display: flex;
-    height: 100vh; /* 100% da altura da tela */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Lado esquerdo - Upload de imagem */
-.image-upload-container {
-    width: 50vw; /* 50% da largura da tela */
-    height: 100vh; /* 100% da altura da tela */
-    position: fixed; /* Fixa no lado esquerdo */
-    left: 0; /* Alinha ao lado esquerdo */
-    top: 0;
-    box-sizing: border-box; /* Inclui borda e padding no cálculo */
-    padding: 20px; /* Espaçamento interno */
-    overflow: auto; /* Rolagem se necessário */
-    background-color: #f5f5f5;
+
+.form-wrapper {
     display: flex;
-    flex-direction: column; /* Conteúdo em coluna */
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
-    text-align: center; /* Centraliza texto */
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-/* Estilo para o texto acima do formulário */
-.form-text {
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 12px; /* Tamanho da fonte */
-    margin-bottom: 5px; /* Espaçamento abaixo do título */
-}
-
-/* Linha abaixo do título */
-.divider {
-    border: 0; /* Remove a borda padrão */
-    border-top: 2px solid #007bff; /* Linha azul */
-    margin: 10px 0; /* Espaçamento acima e abaixo da linha */
-}
-
-/* Lado direito - Formulário */
 .form-container {
-    font-weight: bold;
-    width: 50vw; /* 50% da largura da tela */
-    margin-left: 50vw; /* Posiciona no lado direito */
-    height: 100vh; /* 100% da altura da tela */
-    padding: 20px;
-    box-sizing: border-box;
-    overflow: auto; /* Exibe rolagem se necessário */
-    display: flex;
-    flex-direction: column; /* Coluna para os campos do formulário */
-    justify-content: center; /* Centraliza verticalmente */
+    width: 65%;
 }
 
-/* Espaçamento entre campos do formulário */
+.image-upload-container {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+    .image-upload-container label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+.image-preview {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
 .form-group {
     margin-bottom: 15px;
 }
 
-/* Estilização do botão */
 button {
-    width: 100%; /* Botão ocupa toda a largura */
+    width: 100%;
     padding: 10px;
     font-size: 16px;
-    color: #fff; /* Texto branco */
-    background-color: #007bff; /* Fundo azul */
-    border: none; /* Remove borda */
-    border-radius: 4px; /* Arredonda os cantos */
-    cursor: pointer; /* Cursor de mão */
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
     button:hover {
-        background-color: #0056b3; /* Fundo azul escuro ao passar o mouse */
+        background-color: #0056b3;
     }

@@ -1,63 +1,66 @@
 @model findPet.Models.telaCadastroModel
-@{
-    Layout = "_CadastroLayout";  // Define o layout que você criou
-}
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Usuario</title>
-    <link rel="stylesheet" href="/css/site.css">
+    <title></title>
+    <link rel="stylesheet" href="/css/TelaCadastrocss.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Cadastre-se</h1>
-        
-        @if (TempData["SuccessMessage"] != null)
-        {
-            <div class="success-message">@TempData["SuccessMessage"]</div>
-        }
+<!-- Hot Bar - Barra superior -->
+<div class="hot-bar">
+    <div class="hot-bar-item"><a href="#">Sobre nós</a></div>
+    <div class="hot-bar-item"><a href="#">Redes Sociais</a></div>
+    <div class="hot-bar-item login"><a href="#">Login</a></div> 
+    </div>
 
-        <form asp-action="Create" asp-controller="telaCadastroModel" method="post">
+    <div class="container">
+        <!-- Lado esquerdo: Imagem gatinho -->
+        <div>
+            <img class="gato" src="/imagem/gatoroxo.jpg" alt= Gato>
+            
+        </div>
+        <!-- Lado direito: Formulário -->
+        <form asp-action="Create" asp-controller="TelaPublicacao" method="post" enctype="multipart/form-data" class="form-container">
+            <!-- Texto acima do formulário -->
+            <div class="form-text">
+                <h2>Cadastre-se</h2>
+            </div>
+
+            <!-- Linha abaixo do título -->
+            <hr class="divider" />
+
+            <!-- Campos do Formulário -->
             <div class="form-group">
-                <label for="Nome">Nome</label>
+                <label for="Nome">Nome Completo</label>
                 <input type="text" id="Nome" name="Nome" value="@Model?.Nome" required />
             </div>
-            
             <div class="form-group">
                 <label for="Email">E-mail</label>
                 <input type="text" id="Email" name="Email" value="@Model?.Email" required />
             </div>
-            
             <div class="form-group">
                 <label for="Senha">Senha</label>
                 <input type="text" id="Senha" name="Senha" value="@Model?.Senha" required />
             </div>
-            
             <div class="form-group">
                 <label for="CPF">CPF</label>
                 <input type="text" id="CPF" name="CPF" value="@Model?.CPF" required />
             </div>
-            
             <div class="form-group">
                 <label for="Telefone">Telefone</label>
                 <input type="text" id="Telefone" name="Telefone" value="@Model?.Telefone" required />
             </div>
-
             <div class="form-group">
                 <label for="DataNascimento">Data de Nascimento</label>
-                <input type="date" id="DataNascimento" name="DataNascimento" value="@Model?.DataNascimento.ToString("yyyy-MM-dd") required />
+                <input type="date" id="DataNascimento" name="DataNascimento" value="@Model?.DataNascimento.ToString("yyyy-MM-dd")" required />
             </div>
-            
+            <button type="submit">Próximo</button>
         </form>
-        <form asp-action="Create" method="post">
-           <button type="submit">Proximo</button>
-        </form>
-
     </div>
-    <footer>
-        <p>&copy; 2024 Minha Aplicacao. Todos os direitos reservados.</p>
-    </footer>
+
+    </script>
 </body>
 </html>
