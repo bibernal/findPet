@@ -5,13 +5,19 @@ namespace findPet.Controllers
 {
     public class TelaCadastroController : Controller
     {
-        [HttpGet]
-        public IActionResult Index()
-        {
-            // Define a codificação de resposta para UTF-8
-            Response.ContentType = "text/html; charset=utf-8";
-            return View();
-        }
+       [HttpPost]
+    public IActionResult Create(telaCadastroModel model)
+    {
+        // Aqui você pode processar os dados do formulário, salvar no banco, etc.
+        
+        // Redireciona para a TelaCadastro2 após o submit
+        return RedirectToAction("Index", "TelaCadastro2");
+    }
 
+    [HttpGet]
+    public IActionResult Index()
+    {
+        return View();
+    }
     }
 }

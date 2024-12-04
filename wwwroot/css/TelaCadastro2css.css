@@ -12,19 +12,19 @@
 .form-row {
     display: flex;
     justify-content: space-between;
-    gap: 20px; /* Espaço entre os campos na mesma linha */
-    margin-bottom: 10px;
+    gap: 15px; /* Diminuir o espaço entre os campos na mesma linha de 20px para 10px */
+    margin-bottom: 0px; /* Diminuir o espaçamento entre as linhas de campos */
 }
 
-/* Ajuste para garantir que os campos fiquem com tamanho adequado */
 .form-group {
     flex: 1;
     display: flex;
     flex-direction: column;
+    margin-bottom: 8px; /* Diminuir o espaço abaixo de cada grupo de campos */
 }
 
 /* Ajuste para garantir que todos os campos de entrada tenham o mesmo tamanho */
-input[type="text"], input[type="date"], input[type="password"] {
+input[type="text"], input[type="date"], input[type="string"] {
     width: 100%; /* Garantir que todos os campos ocupem a largura completa do contêiner */
     padding: 8px; /* Tamanho do preenchimento interno */
     font-size: 14px; /* Tamanho da fonte */
